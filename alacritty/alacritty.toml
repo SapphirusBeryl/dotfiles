@@ -1,0 +1,84 @@
+live_config_reload = true
+
+[bell.command]
+args = ["/usr/share/sounds/freedesktop/stereo/dialog-warning.oga"]
+program = "paplay"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0x5b5858"
+blue = "0x3fc4de"
+cyan = "0x6be4e6"
+green = "0x3fdaa4"
+magenta = "0xf075b5"
+red = "0xec6a88"
+white = "0xd5d8da"
+yellow = "0xfbc3a7"
+
+[colors.normal]
+black = "0x16161c"
+blue = "0x26bbd9"
+cyan = "0x59e1e3"
+green = "0x29d398"
+magenta = "0xee64ac"
+red = "0xe95678"
+white = "0xd5d8da"
+yellow = "0xfab795"
+
+[colors.primary]
+background = "#000000"
+foreground = "#FFFFFF"
+
+[cursor]
+blink_interval = 300
+thickness = 0.25
+unfocused_hollow = false
+vi_mode_style = "Beam"
+
+[cursor.style]
+blinking = "Always"
+shape = "Underline"
+
+[env]
+LANG = "en_CA.UTF-8"
+LC_ALL = "en_CA.UTF-8"
+TERM = "alacritty"
+
+[font]
+size = 8.5
+
+[font.bold]
+family = "Dina"
+
+[font.bold_italic]
+family = "Dina"
+
+[font.italic]
+family = "Dina"
+
+[font.normal]
+family = "Dina"
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 0
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+[window]
+dynamic_padding = true
+dynamic_title = true
+opacity = 0.7
+startup_mode = "Windowed"
+title = "Terminal"
+
+[window.dimensions]
+columns = 130
+lines = 25
