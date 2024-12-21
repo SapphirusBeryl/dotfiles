@@ -9,7 +9,7 @@ return require('packer').startup(function(use)
  
 
     use('olimorris/onedarkpro.nvim')
-    use('EdenEast/nightfox.nvim')
+    use('SapphirusBeryl/nightfox.nvim')
     use('nvim-tree/nvim-web-devicons')
    
     use('nvim-treesitter/playground');
