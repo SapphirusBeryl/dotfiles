@@ -20,5 +20,6 @@ vim.g.moonflyUndercurls = false
 
 vim.o.updatetime = 300
 vim.o.incsearch = false
+vim.o.winborder = "rounded"
 
 vim.lsp.buf.signature_help = true

@@ -1,11 +1,20 @@
-lsp.config('rust_analyzer', {
+lsp.config("rust_analyzer", {
     capabilities = cmp_defcaps,
+    cmd = { "lspmux" },
     settings = {
-        ['rust-analyzer'] = {
+        ["rust-analyzer"] = {
             diagnostics = {
                 enable = true;
+            },
+            completion = {
+                callable = {
+                    snippets = "add_parentheses",
+                },
+            },
+            rustfmt = {
+                extraArgs = { "+nightly" };
             }
         }
     }
 })
-lsp.enable('rust_analyzer')
+lsp.enable("rust_analyzer")

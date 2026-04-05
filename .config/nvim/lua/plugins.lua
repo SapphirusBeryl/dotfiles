@@ -1,61 +1,36 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+local gh = function(x) return "https://github.com/" .. x end
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+vim.pack.add({
+    gh("tanvirtin/vgit.nvim"),
+    gh("mbbill/undotree"),
 
-return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use('wbthomason/packer.nvim')
- 
-    use('olimorris/onedarkpro.nvim')
-    use('SapphirusBeryl/nightfox.nvim')
-    use('nvim-tree/nvim-web-devicons')
+    -- Theme
+    gh("SapphirusBeryl/nightfox.nvim"),
 
-    use('mbbill/undotree')
-   
-    use {
-        'neovim/nvim-lspconfig', 
-        requires = {
-            -- Mason Package Manager
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+    -- LSP Config
+    gh("neovim/nvim-lspconfig"),
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lsp-signature-help'},
-            {'L3MON4D3/LuaSnip'},
-        }
-    }
+    -- Mason Package Manager
+    gh("williamboman/mason.nvim"),
+    gh("williamboman/mason-lspconfig.nvim"),
 
-    use { 
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-    }
+    -- Telescope
+    gh("nvim-telescope/telescope.nvim"),
 
-    use {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.x',
-        requires = {
-            {'nvim-lua/plenary.nvim'} 
-        }
-    }
+    -- Treesitter
+    gh("nvim-treesitter/nvim-treesitter"),
+    gh("nvim-treesitter/nvim-treesitter-context"),
 
-    use {
-        'nvim-neo-tree/neo-tree.nvim',
-        branch = 'v3.x',
-        requires = { 
-            'nvim-lua/plenary.nvim',
-            'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
-            'MunifTanjim/nui.nvim',
-            -- '3rd/image.nvim', -- Optional image support in preview window: See `# Preview Mode` for more information
-        }
-    } 
+    -- Autocompletion
+    { src = gh("L3MON4D3/LuaSnip") },
+    { src = gh("Saghen/blink.cmp"), version = "v1.10.1" },
+    { src = gh("ribru17/blink-cmp-spell") },
 
-    use {
-        'tanvirtin/vgit.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim'
-        }
-    }
-end)
+    -- Neo-tree
+    { src = gh("nvim-neo-tree/neo-tree.nvim"), version = "v3.x" },
+
+    -- Dependencies
+    gh("nvim-lua/plenary.nvim"), -- neo-tree, telescope, and vgit
+    gh("nvim-tree/nvim-web-devicons"), -- neo-tree
+    gh("MunifTanjim/nui.nvim"), -- neo-tree
+})

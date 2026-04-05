@@ -1,13 +1,9 @@
-lua require('plugins')
-lua require('telescope')
-lua require('config.bindings')
-lua require('config.telescope')
-lua require('config.treesitter')
-lua require('config.lsp')
-lua require('config.editor')
-lua require('config.theme')
+lua require("plugins")
+lua require("config")
 
-set guicursor=
+set spell spelllang=en_ca
+
+set guicursor=a:hor20
 set autoindent 
 set wildmode=longest,list
 set laststatus=0
@@ -23,6 +19,8 @@ filetype indent on
 
 colorscheme carbonfox
 
-hi Normal     ctermbg=NONE guibg=NONE
-hi SignColumn ctermbg=NONE guibg=NONE
-hi LineNr     ctermbg=NONE guibg=none guifg=Grey
+hi Normal       ctermbg=NONE guibg=NONE guifg=#e2e2e2
+hi NormalFloat  ctermbg=NONE guibg=NONE guifg=#dedede
+hi Pmenu        ctermbg=NONE guibg=NONE guifg=#a7a7a7
+hi SignColumn   ctermbg=NONE guibg=NONE guifg=Grey
+hi LineNr       ctermbg=NONE guibg=NONE guifg=Grey

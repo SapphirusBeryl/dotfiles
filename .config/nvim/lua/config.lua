@@ -1,0 +1,7 @@
+require("config.bindings")
+require("config.telescope")
+require("config.spell")
+require("config.lsp")
+require("config.treesitter")
+require("config.editor")
+require("config.theme")
